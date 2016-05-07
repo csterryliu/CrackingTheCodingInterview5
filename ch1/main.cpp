@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include "uniq_ch.hpp"
 #include "reversestr.hpp"
+#include "permutation.hpp"
 
 // using namespace std;
 
@@ -26,7 +27,7 @@ int main(int argc, char** argv) {
     break;
     case 2:
     {
-      printf("=== Question 2.1=== \n");
+      printf("=== Question 1.2===\n");
       ReverseStr r;
       char c1[] = {'G', 'i', 't', 'H', 'u', 'b', '\0'};
       r.Reverse(c1);
@@ -36,6 +37,21 @@ int main(int argc, char** argv) {
       r.Reverse(c3);
     }
     break;
+      case 3:
+      {
+          printf("=== Question 1.3===\n");
+          PermutationDetector p;
+          std::string s1 = "hello";
+          std::string s2 = "oelhl";
+          p.Judge(s1, s2);
+          std::string s3 = "1234";
+          std::string s4 = "3541";
+          p.Judge(s3, s4);
+          std::string s5 = "app";
+          std::string s6 = "apple";
+          p.Judge(s5, s6);
+      }
+          break;
     default:
       printf("No solution\n");
       break;

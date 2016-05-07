@@ -50,6 +50,9 @@ int main(int argc, char** argv) {
           std::string s5 = "app";
           std::string s6 = "apple";
           p.Judge(s5, s6);
+          std::string s7 = "love";
+          std::string s8 = "eovl";
+          p.JudgeWithoutMap(s7, s8);
       }
           break;
     default:

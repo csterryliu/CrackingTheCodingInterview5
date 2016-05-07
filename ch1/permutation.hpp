@@ -16,8 +16,8 @@ class PermutationDetector {
 public:
     PermutationDetector();
     ~PermutationDetector();
-    bool Judge(std::string s1, std::string s2);
-    bool JudgeWithoutMap(std::string s1, std::string s2);
+    bool Judge(std::string& s1, std::string& s2);
+    bool JudgeWithoutMap(std::string& s1, std::string& s2);
 };
 
 #endif /* permutation_hpp */

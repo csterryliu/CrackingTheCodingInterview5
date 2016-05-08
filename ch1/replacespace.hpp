@@ -10,8 +10,6 @@
 #define replacespace_hpp
 
 #include <stdio.h>
-#include <string>
-#include <memory>
 
 #endif /* replacespace_hpp */
 

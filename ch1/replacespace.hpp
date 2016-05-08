@@ -17,6 +17,9 @@ class ReplaceSpace {
 public:
     ReplaceSpace();
     ~ReplaceSpace();
+    // post condition:
+    // the character array has sufficient space at the end of the string
+    // to hold the the additional character
     void Replace(char* str, int len);
 private:
     const char* replacement_;

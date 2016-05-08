@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
           printf("=== Question 1.4 ===\n");
           ReplaceSpace r;
           std::string s1 = "Hi this is Tony Stark speaking";
-          char ch_array[100] = {0};
+          char ch_array[100];
           memcpy(ch_array, s1.c_str(), s1.length());
           printf("%s\n", ch_array);
           r.Replace(ch_array, static_cast<int>(s1.length()));

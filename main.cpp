@@ -5,6 +5,7 @@
 #include "reversestr.hpp"
 #include "permutation.hpp"
 #include "replacespace.hpp"
+#include "singlylinkedlist.hpp"
 
 // using namespace std;
 
@@ -66,6 +67,21 @@ int main(int argc, char** argv) {
           memcpy(ch_array, s1.c_str(), s1.length());
           printf("%s\n", ch_array);
           r.Replace(ch_array, static_cast<int>(s1.length()));
+      }
+          break;
+      case 5:  // fix me later
+      {
+          SinglyLinkedList list;
+          list.Insert(1);
+          list.Insert(3);
+          list.Insert(5);
+          list.Insert(7);
+          
+          list.Delete(10);
+          list.Delete(5);
+          list.Delete(7);
+          list.Delete(1);
+          list.Delete(3);
       }
           break;
     default:

@@ -1,8 +1,10 @@
 #include <iostream>
 #include <stdlib.h>
+#include <memory>
 #include "uniq_ch.hpp"
 #include "reversestr.hpp"
 #include "permutation.hpp"
+#include "replacespace.hpp"
 
 // using namespace std;
 
@@ -39,7 +41,7 @@ int main(int argc, char** argv) {
     break;
       case 3:
       {
-          printf("=== Question 1.3===\n");
+          printf("=== Question 1.3 ===\n");
           PermutationDetector p;
           std::string s1 = "hello";
           std::string s2 = "oelhl";
@@ -53,6 +55,17 @@ int main(int argc, char** argv) {
           std::string s7 = "love";
           std::string s8 = "eovl";
           p.JudgeWithoutMap(s7, s8);
+      }
+          break;
+      case 4:
+      {
+          printf("=== Question 1.4 ===\n");
+          ReplaceSpace r;
+          std::string s1 = "Hi this is Tony Stark speaking";
+          char ch_array[100] = {0};
+          memcpy(ch_array, s1.c_str(), s1.length());
+          printf("%s\n", ch_array);
+          r.Replace(ch_array, static_cast<int>(s1.length()));
       }
           break;
     default:

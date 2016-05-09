@@ -23,6 +23,7 @@ public:
     void Insert(int data);
     void Delete(int data);
     int GetCount();
+    Node* GetFront();
     void ShowAll();
     
 private:

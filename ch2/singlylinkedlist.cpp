@@ -70,6 +70,9 @@ void SinglyLinkedList::Delete(int data) {
 int SinglyLinkedList::GetCount() {
     return cnt_;
 }
+Node* SinglyLinkedList::GetFront() {
+    return front_;
+}
 void SinglyLinkedList::ShowAll() {
     if (front_ == NULL) {
         printf("empty\n");

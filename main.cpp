@@ -6,6 +6,7 @@
 #include "permutation.hpp"
 #include "replacespace.hpp"
 #include "singlylinkedlist.hpp"
+#include "removeduplicates.hpp"
 
 // using namespace std;
 
@@ -76,12 +77,11 @@ int main(int argc, char** argv) {
           list.Insert(3);
           list.Insert(5);
           list.Insert(7);
+          list.Insert(7);
+          list.Insert(8);
+          RemoveDuplicate rd;
+          rd.Remove(list);
           
-          list.Delete(10);
-          list.Delete(5);
-          list.Delete(7);
-          list.Delete(1);
-          list.Delete(3);
       }
           break;
     default:

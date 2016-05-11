@@ -80,7 +80,16 @@ int main(int argc, char** argv) {
           list.Insert(7);
           list.Insert(8);
           RemoveDuplicate rd;
+          printf("Remove duplicates\n");
           rd.Remove(list);
+          
+          list.Insert(3);
+          list.Insert(1);
+          list.Insert(8);
+          list.Insert(7);
+          list.Insert(12);
+          printf("remove duplicate without buffer\n");
+          rd.RemoveWithoutBuffer(list);
           
       }
           break;

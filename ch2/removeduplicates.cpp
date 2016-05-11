@@ -36,6 +36,29 @@ void RemoveDuplicate::Remove(SinglyLinkedList &list) {
     }
     
     list.ShowAll();
+}
+
+void RemoveDuplicate::RemoveWithoutBuffer(SinglyLinkedList &list) {
+    if (list.GetCount() == 0) {
+        return;
+    }
+    Node* current = list.GetFront();
     
+    while (current != NULL) {
+        Node* runner = current;
+        while(runner->next != NULL) {
+            if (runner->next->value == current->value) {
+                // remove the duplicate one
+                Node* trash = runner->next;
+                runner->next = runner->next->next;
+                delete trash;
+            } else {
+                runner = runner->next;
+            }
+            
+        }
+        current = current->next;
+    }
     
+    list.ShowAll();
 }

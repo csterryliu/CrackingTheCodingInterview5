@@ -22,6 +22,7 @@ public:
     ~SinglyLinkedList();
     void Insert(int data);
     void Delete(int data);
+    int FindKToLastElement(int k);
     int GetCount();
     Node* GetFront();
     void ShowAll();

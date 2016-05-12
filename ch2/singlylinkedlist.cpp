@@ -12,7 +12,7 @@ SinglyLinkedList::SinglyLinkedList()
 : cnt_(0),
   front_(NULL) {
 }
-
+//------------------
 SinglyLinkedList::~SinglyLinkedList() {
     Node* current = front_;
     while (current != NULL) {
@@ -22,6 +22,7 @@ SinglyLinkedList::~SinglyLinkedList() {
     }
     front_ = NULL;
 }
+//------------------
 void SinglyLinkedList::Insert(int data) {
     if (front_ == NULL) {
         front_ = new Node();
@@ -41,6 +42,7 @@ void SinglyLinkedList::Insert(int data) {
     cnt_++;
     ShowAll();
 }
+//------------------
 void SinglyLinkedList::Delete(int data) {
     Node* current = front_;
     if (current->value == data) {
@@ -67,12 +69,15 @@ void SinglyLinkedList::Delete(int data) {
     }
     printf("Target not found\n");
 }
+//------------------
 int SinglyLinkedList::GetCount() {
     return cnt_;
 }
+//------------------
 Node* SinglyLinkedList::GetFront() {
     return front_;
 }
+//------------------
 void SinglyLinkedList::ShowAll() {
     if (front_ == NULL) {
         printf("empty\n");
@@ -84,4 +89,21 @@ void SinglyLinkedList::ShowAll() {
         n = n->next;
     }
     printf("%d \n", n->value);
+}
+//------------------
+int SinglyLinkedList::FindKToLastElement(int k) {
+    if (cnt_ == 0) {
+        printf("list is empty\n");
+        return 0;
+    }
+    int targetindex = cnt_ - k - 1;
+    if (targetindex < 0) {
+        printf("k is out of bound\n");
+        return 0;
+    }
+    Node* target = front_;
+    for (int i = 0; i < targetindex; i++) {
+        target = target->next;
+    }
+    return target->value;
 }

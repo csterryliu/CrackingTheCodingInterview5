@@ -91,6 +91,21 @@ int main(int argc, char** argv) {
           printf("remove duplicate without buffer\n");
           rd.RemoveWithoutBuffer(list);
           
+          SinglyLinkedList list2;
+          list2.Insert(3);
+          list2.Insert(1);
+          list2.Insert(8);
+          list2.Insert(7);
+          list2.Insert(12);
+          
+          printf("find kth to the last element\n");
+          printf("k=1, result: %d\n", list2.FindKToLastElement(1));
+          printf("k=2, result: %d\n", list2.FindKToLastElement(2));
+          printf("k=3, result: %d\n", list2.FindKToLastElement(3));
+          printf("k=4, result: %d\n", list2.FindKToLastElement(4));
+          printf("k=5, result: %d\n", list2.FindKToLastElement(5));
+          printf("k=6, result: %d\n", list2.FindKToLastElement(6));
+          
       }
           break;
     default:

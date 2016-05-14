@@ -7,6 +7,7 @@
 #include "replacespace.hpp"
 #include "singlylinkedlist.hpp"
 #include "removeduplicates.hpp"
+#include "removemiddlenode.hpp"
 
 // using namespace std;
 
@@ -105,6 +106,13 @@ int main(int argc, char** argv) {
           printf("k=4, result: %d\n", list2.FindKToLastElement(4));
           printf("k=5, result: %d\n", list2.FindKToLastElement(5));
           printf("k=6, result: %d\n", list2.FindKToLastElement(6));
+          
+          printf("delete a node in the middle of list\n");
+          RemoveMiddleNode rm;
+          Node* n = list2.GetFront()->next->next->next;
+          rm.Remove(n);
+          list2.ShowAll();
+          
           
       }
           break;

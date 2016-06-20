@@ -8,6 +8,7 @@
 #include "singlylinkedlist.hpp"
 #include "removeduplicates.hpp"
 #include "removemiddlenode.hpp"
+#include "simplestack.hpp"
 
 // using namespace std;
 
@@ -114,6 +115,26 @@ int main(int argc, char** argv) {
           list2.ShowAll();
           
           
+      }
+          break;
+      case 6:
+      {
+          printf("test simple stack\n");
+          SimpleStack ss;
+          if (ss.IsEmpty()) {
+              printf("stack is empty now\n");
+          }
+          ss.Push(12);
+          ss.Push(2);
+          ss.Push(8);
+          ss.Push(30);
+          while (!ss.IsEmpty()) {
+              int currntTop = 0;
+              ss.GetTop(&currntTop);
+              printf("len: %d, top: %d\n", ss.GetLength(), currntTop);
+              ss.Pop(&currntTop);
+              printf("pop: %d\n", currntTop);
+          }
       }
           break;
     default:
